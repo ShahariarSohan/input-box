@@ -44,3 +44,11 @@ document.getElementById('justify-btn').addEventListener('click',function(){
     const textArea =document.getElementById('text-area')
    textArea.style.textAlign ="justify"
 })
+// font size 
+const fontSizeInput = document.getElementById("font-size-input");
+const textArea = document.getElementById("text-area");
+
+fontSizeInput.addEventListener("input", function() {
+    const newSize = fontSizeInput.value + "px";
+    textArea.style.fontSize = newSize;
+});
