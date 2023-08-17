@@ -46,17 +46,31 @@ document.getElementById('justify-btn').addEventListener('click',function(){
 })
 // font size 
     const fontSizeInput = document.getElementById("font-size-input");
-    const textArea = document.getElementById("text-area");
 
 fontSizeInput.addEventListener("input", function() {
+    const textArea = document.getElementById("text-area");
     const newSize = fontSizeInput.value + "px";
     textArea.style.fontSize = newSize;
 });
 // color change
     const colorPicker = document.getElementById('color-picker');
-     const textField = document.getElementById("text-area");
 
         colorPicker.addEventListener('input', function() {
+            const textArea = document.getElementById("text-area");
             const selectedColor = colorPicker.value;
-            textField.style.color = selectedColor;
+            textArea.style.color = selectedColor;
         });
+
+// letter case        
+const lowercaseButton = document.getElementById('lower-case-btn');
+const uppercaseButton = document.getElementById('upper-case-btn');
+
+lowercaseButton.addEventListener('click', function() {
+    const textArea = document.getElementById('text-area');
+    textArea.value = textArea.value.toLowerCase();
+});
+
+uppercaseButton.addEventListener('click', function() {
+    const textArea = document.getElementById('text-area');
+    textArea.value = textArea.value.toUpperCase();
+});
