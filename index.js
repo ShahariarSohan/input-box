@@ -45,10 +45,18 @@ document.getElementById('justify-btn').addEventListener('click',function(){
    textArea.style.textAlign ="justify"
 })
 // font size 
-const fontSizeInput = document.getElementById("font-size-input");
-const textArea = document.getElementById("text-area");
+    const fontSizeInput = document.getElementById("font-size-input");
+    const textArea = document.getElementById("text-area");
 
 fontSizeInput.addEventListener("input", function() {
     const newSize = fontSizeInput.value + "px";
     textArea.style.fontSize = newSize;
 });
+// color change
+    const colorPicker = document.getElementById('color-picker');
+     const textField = document.getElementById("text-area");
+
+        colorPicker.addEventListener('input', function() {
+            const selectedColor = colorPicker.value;
+            textField.style.color = selectedColor;
+        });
